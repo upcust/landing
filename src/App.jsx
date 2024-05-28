@@ -56,13 +56,13 @@ function App() {
       <main className="container">
         <div className="h-screen flex flex-col align-middle justify-center space-y-8">
           <div>
-            <img src={cube} alt="Cube" className="w-40 mx-auto" />
-            <h1 className="text-6xl font-bold text-center">
+            <img src={cube} alt="Cube" className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-2xl">
               Libérez votre potentiel de <br />
               Community Manager
             </h1>
           </div>
-          <p className="text-2xl max-w-[480px] mx-auto text-center">
+          <p className="md:text-2xl max-w-[480px] mx-auto text-center ">
             Créez, planifiez, validez, modérez et analysez tous vos posts.
             <br />
             Soyez en veille des dernières tendances.
