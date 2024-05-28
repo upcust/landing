@@ -15,6 +15,9 @@ module.exports = {
       sans: ['Inter', 'sans-serif'],
     },
     extend: {
+      backdropBlur: {
+        xs: '4px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
