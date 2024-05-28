@@ -57,7 +57,7 @@ function App() {
         <div className="h-screen flex flex-col align-middle justify-center space-y-8">
           <div>
             <img src={cube} alt="Cube" className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
-            <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-2xl">
+            <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-3xl">
               Libérez votre potentiel de <br />
               Community Manager
             </h1>
