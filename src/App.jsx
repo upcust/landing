@@ -3,16 +3,16 @@ import './App.css';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button.jsx';
 import { SheetContent, SheetTrigger, Sheet } from '@/components/ui/sheet.jsx';
-import { CircleUser, Menu, Package2, Search } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-import logo_inline from '/public/logo_inline.png';
-import cube from '/public/cube.png';
+import logo_inline from '/logo_inline.png';
+import cube from '/cube.png';
 
 function App() {
   return (
     <BrowserRouter>
-      <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs">
+      <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs z-50">
         <nav className="flex justify-between items-center p-4 container">
           <Link to="#">
             <img src={logo_inline} alt="Logo" className="h-10" />
@@ -69,7 +69,34 @@ function App() {
           </p>
           <Button className="w-fit align-middle mx-auto text-lg font-medium text-black">Je m’inscris</Button>
         </div>
-        <Accordion type="single" collapsible>
+        <div className="md:space-y-16 space-y-10 py-28">
+          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Planifiez, simplement.</h2>
+          <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
+            <div className="rounde bg-gray-100 md:col-span-2 md:aspect-video aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+          </div>
+        </div>
+        <div className="md:space-y-16 space-y-10 py-28">
+          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez, sans efforts</h2>
+          <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
+            <div className="rounde bg-gray-100 md:col-span-2 md:aspect-video aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+            <div className="rounded bg-gray-100 aspect-square" />
+          </div>
+        </div>
+        <div className="md:space-y-16 space-y-10 py-28">
+          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Centralisez votre veille</h2>
+          <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
+            <div className="rounde bg-gray-100 md:col-span-3 md:aspect-video aspect-square" />
+            <div className="rounded bg-gray-100 aspect-video" />
+            <div className="rounded bg-gray-100 aspect-video" />
+            <div className="rounded bg-gray-100 aspect-video" />
+          </div>
+        </div>
+        <Accordion type="single" collapsible className="pb-20">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-lg">Première question</AccordionTrigger>
             <AccordionContent className="text-left text-lg">
@@ -78,8 +105,15 @@ function App() {
               porta at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger className="text-lg">Deuxième question</AccordionTrigger>
+            <AccordionContent className="text-left text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare luctus nunc, a porta risus dictum
+              vitae. Aenean vel nisl sed sapien convallis varius. Integer tristique convallis arcu, a scelerisque quam
+              porta at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
-        <div className="h-screen flex flex-col align-middle justify-center space-y-8"></div>
       </main>
     </BrowserRouter>
   );
