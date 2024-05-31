@@ -8,6 +8,7 @@ import { BrowserRouter, Link } from 'react-router-dom';
 
 import logo_inline from '/logo_inline.png';
 import cube from '/cube.png';
+import { InlineWidget } from 'react-calendly';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             <Link to="#" className="text-muted-foreground hover:text-foreground">
               Suivez
             </Link>
-            <Button className="w-fit text-black font-medium">Je m’inscris</Button>
+            <Button className="w-fit text-black font-medium">Je veux une démo</Button>
           </div>
           <Sheet>
             <SheetTrigger asChild>
@@ -47,7 +48,7 @@ function App() {
                 <Link to="#" className="text-muted-foreground hover:text-foreground">
                   Suivez
                 </Link>
-                <Button className="text-black font-medium">Je m’inscris</Button>
+                <Button className="text-black font-medium">Je veux une démo</Button>
               </nav>
             </SheetContent>
           </Sheet>
@@ -96,6 +97,19 @@ function App() {
             <div className="rounded bg-gray-100 aspect-video" />
           </div>
         </div>
+        <InlineWidget
+          url={'https://calendly.com/upcust-app/30min'}
+          pageSettings={{
+            backgroundColor: 'ffffff',
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
+            primaryColor: 'FACC15',
+            textColor: '000000',
+          }}
+          styles={{
+            height: '1000px',
+          }}
+        />
         <Accordion type="single" collapsible className="pb-20">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-lg">Première question</AccordionTrigger>
