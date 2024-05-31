@@ -101,13 +101,14 @@ function App() {
           url={'https://calendly.com/upcust-app/30min'}
           pageSettings={{
             backgroundColor: 'ffffff',
-            hideEventTypeDetails: false,
-            hideLandingPageDetails: false,
+            hideEventTypeDetails: true,
+            hideLandingPageDetails: true,
+            hideGdprBanner: true,
             primaryColor: 'FACC15',
             textColor: '000000',
           }}
           styles={{
-            height: '1000px',
+            height: '750px',
           }}
         />
         <Accordion type="single" collapsible className="pb-20">
