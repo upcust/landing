@@ -4,7 +4,23 @@ import { cn } from '@/lib/utils';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button.jsx';
 import { SheetContent, SheetTrigger, Sheet } from '@/components/ui/sheet.jsx';
-import { CircleArrowDown, GalleryHorizontalEnd, LaptopMinimal, Menu, SquareArrowDown, Zap } from 'lucide-react';
+import {
+  ArrowBigUpDash,
+  CheckCheck,
+  CircleArrowDown,
+  Eye,
+  GalleryHorizontalEnd,
+  GalleryVerticalEnd,
+  Handshake,
+  LaptopMinimal,
+  LayoutDashboard,
+  LayoutPanelLeft,
+  Menu,
+  MessageCircle,
+  PencilLine,
+  SquareArrowDown,
+  Zap,
+} from 'lucide-react';
 import { BrowserRouter, Link, NavLink } from 'react-router-dom';
 
 import logo_inline from '/logo_inline.png';
@@ -13,6 +29,7 @@ import cmdk_bg from '/cmdk-bg.png';
 import cmdk from '/cmdk.png';
 import { DotPattern } from '@/components/magicui/dot-pattern.jsx';
 import Reviews from '@/components/reviews.jsx';
+import Meteors from '@/components/magicui/meteors.jsx';
 
 function App() {
   return (
@@ -118,7 +135,7 @@ function App() {
                 <path
                   d="M16.5 7.75V16.5L22.3333 19.4167"
                   stroke="white"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -130,10 +147,11 @@ function App() {
                 Naviguez aisément entre les posts
               </p>
             </div>
-            <div className="rounded bg-gray-100 p-10">
-              <Zap className="text-primary fill-primary w-8 h-8" />
-              <h5 className="md:text-lg font-semibold mt-3">Anticipez l’impact de vos posts</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
+            <div className="rounded bg-gray-100 p-10 relative overflow-hidden">
+              <Meteors number={30} />
+              <Zap className="text-primary fill-primary w-8 h-8 z-10" />
+              <h5 className="md:text-lg font-semibold mt-3 z-10">Anticipez l’impact de vos posts</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1 z-10">
                 Prévisualisez vos publications et optimisez votre stratégie de contenu en un clin d’oeil pour tous vos
                 réseaux
               </p>
@@ -200,18 +218,82 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-28" id="validate">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez, sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square" />
-            <div className="rounded bg-gray-100 aspect-square" />
-            <div className="rounded bg-gray-100 aspect-square" />
+            <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
+              <PencilLine className="text-primary fill-primary h-8 w-8" />
+              <h5 className="md:text-lg font-semibold mt-3">Relancer mes clients ? Jamais</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Faites valider vos posts en 1 clique. Arrêtez de courir après vos clients. Partagez un lien, c'est tout.
+                Ayez le temps d'être créatif.
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-10">
+              <CheckCheck className="text-primary h-8 w-8" strokeWidth={3} />
+              <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Votre client se retrouve sur la même page que vous, sans même insérer d'informations personnelles.
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-10">
+              <MessageCircle className="text-primary fill-primary h-8 w-8" />
+              <h5 className="md:text-lg font-semibold mt-3">Recueillez les retours</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Les commentaires et les retours se retrouvent directement sur la plateforme. Plus besoin de jongler
+                entre les mails. Répondez directement et créez des discussions.
+              </p>
+            </div>
           </div>
         </div>
         <div className="md:space-y-16 space-y-10 py-28" id="trends">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square" />
-            <div className="rounded bg-gray-100 aspect-video" />
-            <div className="rounded bg-gray-100 aspect-video" />
-            <div className="rounded bg-gray-100 aspect-video" />
+            <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10">
+              <GalleryVerticalEnd className="text-primary fill-primary h-8 w-8" />
+              <h5 className="md:text-lg font-semibold mt-3">Tout le contenu intéressant, au même endroit</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Trouvez votre inspiration et suivez les tendances depuis votre fil d'actualité personnalisé et 100%
+                intégré à Upcust.
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-10">
+              <LayoutDashboard className="text-primary fill-primary h-8 w-8" />
+              <h5 className="md:text-lg font-semibold mt-3">Personnalisez</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Votre fil d'actualité à suivre selon les réseaux
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-10">
+              <svg
+                width="24"
+                height="18"
+                viewBox="0 0 24 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-8 w-8"
+              >
+                <path
+                  d="M2 9C2 9 5 2 12 2C19 2 22 9 22 9C22 9 19 16 12 16C5 16 2 9 2 9Z"
+                  fill="#FBBC05"
+                  stroke="#FBBC05"
+                />
+                <path
+                  d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+                  stroke="white"
+                  strokeWidth="2"
+                />
+              </svg>
+              <h5 className="md:text-lg font-semibold mt-3">Visualisation sur-mesure</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Filtrez les comptes et réseaux selon vos besoins
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-10">
+              <ArrowBigUpDash className="text-primary fill-primary h-8 w-8" />
+              <h5 className="md:text-lg font-semibold mt-3">Augmentez votre visibilité</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">Intéragissez en direct avec les publications</p>
+            </div>
           </div>
         </div>
         <div className="min-h-screen">
