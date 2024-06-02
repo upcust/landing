@@ -91,3 +91,7 @@
     transform: translatey(0px);
   }
 }
+
+.active {
+  @apply text-accent-foreground;
+}
