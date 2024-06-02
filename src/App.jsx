@@ -71,7 +71,7 @@ function App() {
         </nav>
       </header>
       <main className="container">
-        <div className="relative min-h-screen flex flex-col align-middle justify-center space-y-8 pb-32">
+        <div className="relative min-h-screen flex flex-col align-middle justify-center space-y-8 py-32">
           <DotPattern
             className={cn('[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]', 'z-0 fill-gray-300')}
             cx={1.5}
