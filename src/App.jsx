@@ -10,10 +10,8 @@ import {
   CircleArrowDown,
   GalleryHorizontalEnd,
   GalleryVerticalEnd,
-  Instagram,
   LaptopMinimal,
   LayoutDashboard,
-  Linkedin,
   Menu,
   MessageCircle,
   PencilLine,
@@ -31,6 +29,7 @@ import Reviews from '@/components/reviews.jsx';
 import Meteors from '@/components/magicui/meteors.jsx';
 import { useState } from 'react';
 import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx';
+import { Confetti } from '@/components/magicui/confetti.jsx';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -63,7 +62,14 @@ function App() {
             >
               Tendances
             </Link>
-            <Button size="sm" className="w-fit text-black font-medium hover:text-primary hover:bg-black">
+            <Button
+              size="sm"
+              className="w-fit text-black font-medium hover:text-primary hover:bg-black"
+              onClick={() => {
+                Confetti({});
+                document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               🚀 Demandez une démo
             </Button>
           </div>
@@ -106,7 +112,14 @@ function App() {
                 >
                   Tendances
                 </Link>
-                <Button size="sm" className="text-black font-medium hover:text-primary hover:bg-black">
+                <Button
+                  size="sm"
+                  className="text-black font-medium hover:text-primary hover:bg-black"
+                  onClick={() => {
+                    Confetti({});
+                    document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   🚀 Demandez une démo
                 </Button>
               </nav>
@@ -134,13 +147,22 @@ function App() {
             <br />
             Soyez en veille des dernières tendances.
           </p>
-          <Button className="w-fit align-middle mx-auto text-lg font-medium z-10 text-black hover:text-primary hover:bg-black">
+          <Button
+            className="w-fit align-middle mx-auto text-lg font-medium z-10 text-black hover:text-primary hover:bg-black"
+            onClick={() => {
+              Confetti({});
+              document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             🚀 Demandez une démo
           </Button>
           <div className="z-10 absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer">
             <CircleArrowDown
               className="h-12 w-12 animate-bounce text-gray-300"
-              onClick={() => document.getElementById('plan').scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                Confetti({});
+                document.getElementById('plan').scrollIntoView({ behavior: 'smooth' });
+              }}
             />
           </div>
         </div>
@@ -269,7 +291,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="md:space-y-16 space-y-10 py-28" id="trends">
+        <div className="md:space-y-16 space-y-10 py-28">
           <h2 className="text-center font-bold xl:text-4xl md:text-3xl text-xl max-w-[700px] mx-auto">
             Pensé pour fonctionner avec vos outils
           </h2>
@@ -337,7 +359,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="min-h-[600px] h-screen flex items-center justify-center pb-10">
+        <div className="min-h-[600px] h-screen flex items-center justify-center pb-10" id="demo">
           <div className="h-3/5 bg-[#2F2C2C] w-full p-10 rounded my-auto"></div>
         </div>
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
