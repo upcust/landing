@@ -30,9 +30,11 @@ import Meteors from '@/components/magicui/meteors.jsx';
 import { useState } from 'react';
 import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx';
 import { Confetti } from '@/components/magicui/confetti.jsx';
+import DemoForm from '@/components/demo-form.jsx';
 
 function App() {
   const [open, setOpen] = useState(false);
+
   return (
     <BrowserRouter>
       <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs z-50">
@@ -359,11 +361,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="min-h-[600px] h-screen flex items-center justify-center pb-10" id="demo">
-          <div className="h-3/5 bg-[#2F2C2C] w-full p-10 rounded my-auto"></div>
-        </div>
+        <DemoForm />
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
-        <Accordion type="multiple" collapsible className="pb-20">
+        <Accordion type="multiple" className="pb-20">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-lg">
               Y a-t-il des limites au nombre de posts que je peux programmer

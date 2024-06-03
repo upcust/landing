@@ -111,7 +111,7 @@ const Icons = {
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 132.004 132"
     >
       <defs>
@@ -171,20 +171,20 @@ const Icons = {
       xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
       xmlns:graph="http://ns.adobe.com/Graphs/1.0/"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
       id="Livello_1"
       x="0px"
       y="0px"
       viewBox="0 0 2289.75 2130"
       enableBackground="new 0 0 2289.75 2130"
-      xml:space="preserve"
+      xmlSpace="preserve"
       {...props}
     >
       <metadata>
         <sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/">
           <slices />
-          <sliceSourceBounds bottomLeftOrigin="true" height="2130" width="2289.75" x="-1147.5" y="-1041" />
+          <sliceSourceBounds height="2130" width="2289.75" x="-1147.5" y="-1041" />
         </sfw>
       </metadata>
       <path
@@ -203,17 +203,17 @@ const Icons = {
       />
       <path
         opacity="0.2"
-        enable-background="new    "
+        enableBackground="new    "
         d="M1127.143,479.25H532.5V1810.5h594.643  c53.834-0.175,97.432-43.773,97.607-97.607V576.857C1224.575,523.023,1180.977,479.425,1127.143,479.25z"
       />
       <path
         opacity="0.2"
-        enable-background="new    "
+        enableBackground="new    "
         d="M1127.143,479.25H532.5V1704h594.643c53.834-0.175,97.432-43.773,97.607-97.607  V576.857C1224.575,523.023,1180.977,479.425,1127.143,479.25z"
       />
       <path
         opacity="0.2"
-        enable-background="new    "
+        enableBackground="new    "
         d="M1073.893,479.25H532.5V1704h541.393c53.834-0.175,97.432-43.773,97.607-97.607  V576.857C1171.325,523.023,1127.727,479.425,1073.893,479.25z"
       />
       <linearGradient
@@ -243,7 +243,7 @@ const Icons = {
   ),
   linkedin: (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" {...props}>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path
           d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
           fill="#007EBB"
