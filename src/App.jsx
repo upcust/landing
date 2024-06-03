@@ -288,17 +288,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="min-h-screen">
-          <iframe
-            src="https://calendly.com/upcust-app/30min?background_color=2F2C2C&hide_event_type_details=1&hide_landing_page_details=1&primary_color=FACC15&text_color=ffffff&hide_gdpr_banner=1&embed_type=Inline&embed_domain=1"
-            style={{
-              height: '750px',
-              width: '100%',
-              background: '#2F2C2C',
-            }}
-            className="rounded"
-          />
-        </div>
+        <div className="min-h-screen"></div>
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
         <Accordion type="multiple" collapsible className="pb-20">
           <AccordionItem value="item-1">
