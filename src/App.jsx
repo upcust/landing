@@ -346,7 +346,7 @@ function App() {
             <AccordionTrigger className="text-lg">
               Y a-t-il des limites au nombre de posts que je peux programmer
             </AccordionTrigger>
-            <AccordionContent className="text-left text-lg">
+            <AccordionContent className="text-left text-lg font-light">
               Non, il n'y a aucune limite au nombre de posts que vous pouvez programmer avec Upcust. Vous avez une
               limitation du nombre de réseaux sociaux que vous pouvez connecter à votre compte ainsi que d'utilisateurs.
               Nos plans sont adaptés à la taille de votre entreprise.
@@ -356,13 +356,13 @@ function App() {
             <AccordionTrigger className="text-lg">
               Puis-je programmer des posts pour plusieurs réseaux sociaux en même temps ?
             </AccordionTrigger>
-            <AccordionContent className="text-left text-lg">
+            <AccordionContent className="text-left text-lg font-light">
               Oui, vous pouvez programmer des posts pour tous les réseaux sociaux que vous utilisez avec Upcust.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
+          <AccordionItem value="item-3">
             <AccordionTrigger className="text-lg">Comment puis-je collaborer sans compte ?</AccordionTrigger>
-            <AccordionContent className="text-left text-lg">
+            <AccordionContent className="text-left text-lg font-light">
               Lorsque vous utilisez Upcust, vous pouvez partager un lien unique pour collaborer avec vos équipes sans
               demander la création d'un compte. Ces invitations sont protégées par un mot de passe pour garantir la
               sécurité de vos contenus. Vous pouvez révoquer l'accès à tout moment.
