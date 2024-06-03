@@ -169,7 +169,7 @@ function App() {
           </div>
         </div>
         <div className="md:space-y-16 space-y-10 py-28" id="plan">
-          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Planifiez, simplement</h2>
+          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Planifiez simplement</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
               <svg
@@ -268,7 +268,7 @@ function App() {
       <Reviews />
       <main className="container">
         <div className="md:space-y-16 space-y-10 py-28" id="validate">
-          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez, sans efforts</h2>
+          <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
               <PencilLine className="text-primary fill-primary w-6 h-6" />
