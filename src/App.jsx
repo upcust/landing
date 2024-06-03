@@ -8,20 +8,16 @@ import {
   ArrowBigUpDash,
   CheckCheck,
   CircleArrowDown,
-  Eye,
   GalleryHorizontalEnd,
   GalleryVerticalEnd,
-  Handshake,
   LaptopMinimal,
   LayoutDashboard,
-  LayoutPanelLeft,
   Menu,
   MessageCircle,
   PencilLine,
-  SquareArrowDown,
   Zap,
 } from 'lucide-react';
-import { BrowserRouter, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 import logo_inline from '/logo_inline.png';
 import cube from '/cube.png';
@@ -35,33 +31,35 @@ function App() {
   return (
     <BrowserRouter>
       <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs z-50">
-        <nav className="flex justify-between items-center p-4 container">
+        <nav className="flex justify-between items-center py-4 container">
           <Link to="#" onClick={() => document.scrollingElement.scrollIntoView({ behavior: 'smooth' })}>
             <img src={logo_inline} alt="Logo" className="h-10" />
           </Link>
           <div className="md:flex gap-8 items-center justify-center hidden">
             <Link
               to="#plan"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('plan').scrollIntoView({ behavior: 'smooth' })}
             >
               Planifiez
             </Link>
             <Link
               to="#validate"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('validate').scrollIntoView({ behavior: 'smooth' })}
             >
               Validez
             </Link>
             <Link
               to="#trends"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('trends').scrollIntoView({ behavior: 'smooth' })}
             >
               Suivez
             </Link>
-            <Button className="w-fit text-black font-medium">Je veux une démo</Button>
+            <Button size="sm" className="w-fit text-black font-medium hover:text-primary hover:bg-black">
+              Je veux une démo
+            </Button>
           </div>
           <Sheet>
             <SheetTrigger asChild>
@@ -123,7 +121,7 @@ function App() {
                 viewBox="0 0 33 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-primary fill-primary"
+                className="w-6 h-6 text-primary fill-primary"
               >
                 <path
                   d="M16.5 31.0833C24.5541 31.0833 31.0833 24.5541 31.0833 16.5C31.0833 8.44584 24.5541 1.91666 16.5 1.91666C8.44581 1.91666 1.91663 8.44584 1.91663 16.5C1.91663 24.5541 8.44581 31.0833 16.5 31.0833Z"
@@ -149,7 +147,7 @@ function App() {
             </div>
             <div className="rounded bg-gray-100 p-10 relative overflow-hidden">
               <Meteors number={30} />
-              <Zap className="text-primary fill-primary w-8 h-8 z-10" />
+              <Zap className="text-primary fill-primary w-6 h-6 z-10" />
               <h5 className="md:text-lg font-semibold mt-3 z-10">Anticipez l’impact de vos posts</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1 z-10">
                 Prévisualisez vos publications et optimisez votre stratégie de contenu en un clin d’oeil pour tous vos
@@ -162,7 +160,7 @@ function App() {
                   viewBox="0 0 28 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 fill-primary"
+                  className="w-6 h-6 fill-primary"
                 >
                   <path d="M24.7083 1.375H4.29167C2.68084 1.375 1.375 2.68084 1.375 4.29167V24.7083C1.375 26.3192 2.68084 27.625 4.29167 27.625H24.7083C26.3192 27.625 27.625 26.3192 27.625 24.7083V4.29167C27.625 2.68084 26.3192 1.375 24.7083 1.375Z" />
                   <path
@@ -197,14 +195,14 @@ function App() {
               </div>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <GalleryHorizontalEnd className="text-primary fill-primary h-8 w-8" />
+              <GalleryHorizontalEnd className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Programmez tout type de post</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Créez et programmez vos stories, vos carrousels, vos réels et tout type de post
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <LaptopMinimal className="text-primary fill-primary h-8 w-8" />
+              <LaptopMinimal className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Créez pour tous les réseaux</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Programmez des posts modulables d’un réseau à un autre selon le format
@@ -219,7 +217,7 @@ function App() {
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez, sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
-              <PencilLine className="text-primary fill-primary h-8 w-8" />
+              <PencilLine className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Relancer mes clients ? Jamais</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Faites valider vos posts en 1 clique. Arrêtez de courir après vos clients. Partagez un lien, c'est tout.
@@ -227,14 +225,14 @@ function App() {
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <CheckCheck className="text-primary h-8 w-8" strokeWidth={3} />
+              <CheckCheck className="text-primary w-6 h-6" strokeWidth={3} />
               <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Votre client se retrouve sur la même page que vous, sans même insérer d'informations personnelles.
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <MessageCircle className="text-primary fill-primary h-8 w-8" />
+              <MessageCircle className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Recueillez les retours</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Les commentaires et les retours se retrouvent directement sur la plateforme. Plus besoin de jongler
@@ -247,7 +245,7 @@ function App() {
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10">
-              <GalleryVerticalEnd className="text-primary fill-primary h-8 w-8" />
+              <GalleryVerticalEnd className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Tout le contenu intéressant, au même endroit</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Trouvez votre inspiration et suivez les tendances depuis votre fil d'actualité personnalisé et 100%
@@ -255,7 +253,7 @@ function App() {
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <LayoutDashboard className="text-primary fill-primary h-8 w-8" />
+              <LayoutDashboard className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Personnalisez</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Votre fil d'actualité à suivre selon les réseaux
@@ -271,7 +269,7 @@ function App() {
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-8 w-8"
+                className="w-6 h-6"
               >
                 <path
                   d="M2 9C2 9 5 2 12 2C19 2 22 9 22 9C22 9 19 16 12 16C5 16 2 9 2 9Z"
@@ -290,7 +288,7 @@ function App() {
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
-              <ArrowBigUpDash className="text-primary fill-primary h-8 w-8" />
+              <ArrowBigUpDash className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Augmentez votre visibilité</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">Intéragissez en direct avec les publications</p>
             </div>
