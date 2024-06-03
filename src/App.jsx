@@ -305,7 +305,8 @@ function App() {
             className="rounded"
           />
         </div>
-        <Accordion type="single" collapsible className="pb-20">
+        <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
+        <Accordion type="multiple" collapsible className="pb-20">
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-lg">Première question</AccordionTrigger>
             <AccordionContent className="text-left text-lg">
