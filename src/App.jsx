@@ -10,11 +10,14 @@ import {
   CircleArrowDown,
   GalleryHorizontalEnd,
   GalleryVerticalEnd,
+  Instagram,
   LaptopMinimal,
   LayoutDashboard,
+  Linkedin,
   Menu,
   MessageCircle,
   PencilLine,
+  Radio,
   Zap,
 } from 'lucide-react';
 import { BrowserRouter, Link } from 'react-router-dom';
@@ -26,8 +29,11 @@ import cmdk from '/cmdk.png';
 import { DotPattern } from '@/components/magicui/dot-pattern.jsx';
 import Reviews from '@/components/reviews.jsx';
 import Meteors from '@/components/magicui/meteors.jsx';
+import { useState } from 'react';
+import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx';
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
     <BrowserRouter>
       <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs z-50">
@@ -58,10 +64,10 @@ function App() {
               Tendances
             </Link>
             <Button size="sm" className="w-fit text-black font-medium hover:text-primary hover:bg-black">
-              Je veux une démo
+              🚀 Demandez une démo
             </Button>
           </div>
-          <Sheet>
+          <Sheet open={open} onOpenChange={(o) => setOpen(o)}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0 md:hidden">
                 <Menu className="h-5 w-5" />
@@ -70,16 +76,39 @@ function App() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="grid gap-6 text-lg font-medium">
-                <Link to="#" className="text-muted-foreground hover:text-foreground">
-                  Planifiez
+                <Link
+                  to="#plan"
+                  className="text-foreground hover:text-primary"
+                  onClick={() => {
+                    setOpen(false);
+                    document.getElementById('plan').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Planification
                 </Link>
-                <Link to="#" className="text-muted-foreground hover:text-foreground">
-                  Validez
+                <Link
+                  to="#validate"
+                  className="text-foreground hover:text-primary"
+                  onClick={() => {
+                    setOpen(false);
+                    document.getElementById('validate').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Validation
                 </Link>
-                <Link to="#" className="text-muted-foreground hover:text-foreground">
-                  Suivez
+                <Link
+                  to="#trends"
+                  className="text-foreground hover:text-primary"
+                  onClick={() => {
+                    setOpen(false);
+                    document.getElementById('trends').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Tendances
                 </Link>
-                <Button className="text-black font-medium">Je veux une démo</Button>
+                <Button size="sm" className="text-black font-medium hover:text-primary hover:bg-black">
+                  🚀 Demandez une démo
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
@@ -105,7 +134,9 @@ function App() {
             <br />
             Soyez en veille des dernières tendances.
           </p>
-          <Button className="w-fit align-middle mx-auto text-lg font-medium text-black z-10">Je m’inscris</Button>
+          <Button className="w-fit align-middle mx-auto text-lg font-medium z-10 text-black hover:text-primary hover:bg-black">
+            🚀 Demandez une démo
+          </Button>
           <div className="z-10 absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer">
             <CircleArrowDown
               className="h-12 w-12 animate-bounce text-gray-300"
@@ -239,6 +270,24 @@ function App() {
           </div>
         </div>
         <div className="md:space-y-16 space-y-10 py-28" id="trends">
+          <h2 className="text-center font-bold xl:text-4xl md:text-3xl text-xl max-w-[700px] mx-auto">
+            Pensé pour fonctionner avec vos outils
+          </h2>
+          <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
+            <div className="rounded bg-gray-100 p-10">
+              <Radio className="text-primary w-6 h-6" strokeWidth={2.5} />
+              <h5 className="md:text-lg font-semibold mt-3">Interconnecté</h5>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">
+                Publiez sur plusieurs réseaux en même temps, automatisez le reporting et communiquez rapidement les
+                performances des publications
+              </p>
+            </div>
+            <div className="rounded bg-gray-100 p-6">
+              <ConnectedSocialNetworks />
+            </div>
+          </div>
+        </div>
+        <div className="md:space-y-16 space-y-10 py-28" id="trends">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10">
@@ -284,27 +333,39 @@ function App() {
             <div className="rounded bg-gray-100 p-10">
               <ArrowBigUpDash className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Augmentez votre visibilité</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">Intéragissez en direct avec les publications</p>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">Intéragissez directement avec les publications</p>
             </div>
           </div>
         </div>
-        <div className="min-h-screen"></div>
+        <div className="min-h-[600px] h-screen flex items-center justify-center pb-10">
+          <div className="h-3/5 bg-[#2F2C2C] w-full p-10 rounded my-auto"></div>
+        </div>
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
         <Accordion type="multiple" collapsible className="pb-20">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-lg">Première question</AccordionTrigger>
+            <AccordionTrigger className="text-lg">
+              Y a-t-il des limites au nombre de posts que je peux programmer
+            </AccordionTrigger>
             <AccordionContent className="text-left text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare luctus nunc, a porta risus dictum
-              vitae. Aenean vel nisl sed sapien convallis varius. Integer tristique convallis arcu, a scelerisque quam
-              porta at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+              Non, il n'y a aucune limite au nombre de posts que vous pouvez programmer avec Upcust. Vous avez une
+              limitation du nombre de réseaux sociaux que vous pouvez connecter à votre compte ainsi que d'utilisateurs.
+              Nos plans sont adaptés à la taille de votre entreprise.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-lg">Deuxième question</AccordionTrigger>
+            <AccordionTrigger className="text-lg">
+              Puis-je programmer des posts pour plusieurs réseaux sociaux en même temps ?
+            </AccordionTrigger>
             <AccordionContent className="text-left text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare luctus nunc, a porta risus dictum
-              vitae. Aenean vel nisl sed sapien convallis varius. Integer tristique convallis arcu, a scelerisque quam
-              porta at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+              Oui, vous pouvez programmer des posts pour tous les réseaux sociaux que vous utilisez avec Upcust.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger className="text-lg">Comment puis-je collaborer sans compte ?</AccordionTrigger>
+            <AccordionContent className="text-left text-lg">
+              Lorsque vous utilisez Upcust, vous pouvez partager un lien unique pour collaborer avec vos équipes sans
+              demander la création d'un compte. Ces invitations sont protégées par un mot de passe pour garantir la
+              sécurité de vos contenus. Vous pouvez révoquer l'accès à tout moment.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
