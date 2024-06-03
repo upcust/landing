@@ -41,21 +41,21 @@ function App() {
               className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('plan').scrollIntoView({ behavior: 'smooth' })}
             >
-              Planifiez
+              Planification
             </Link>
             <Link
               to="#validate"
               className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('validate').scrollIntoView({ behavior: 'smooth' })}
             >
-              Validez
+              Validation
             </Link>
             <Link
               to="#trends"
               className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('trends').scrollIntoView({ behavior: 'smooth' })}
             >
-              Suivez
+              Tendances
             </Link>
             <Button size="sm" className="w-fit text-black font-medium hover:text-primary hover:bg-black">
               Je veux une démo
@@ -140,8 +140,8 @@ function App() {
               </svg>
               <h5 className="md:text-lg font-semibold mt-3">Gérez votre planning en toute simplicité</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Programmez vos posts pour publier au bon moment. <br />
-                Visualisez rapidement votre calendrier. <br />
+                Programmez vos posts pour publier au bon moment <br />
+                Visualisez rapidement votre calendrier <br />
                 Naviguez aisément entre les posts
               </p>
             </div>
@@ -180,8 +180,7 @@ function App() {
                 </svg>
                 <h5 className="md:text-lg font-semibold mt-3">Faites plus, plus vite</h5>
                 <p className="text-sm md:text-base max-w-[450px] mt-1">
-                  Profitez d’une expérience utilisateur jamais vue pour planifier votre contenu et gagnez du temps grâce
-                  à des raccourcis
+                  Profitez d’une expérience utilisateur jamais vue et gagnez du temps grâce à des raccourcis
                 </p>
               </div>
               <div className="overflow-hidden relative rounded-b">
@@ -196,7 +195,7 @@ function App() {
             </div>
             <div className="rounded bg-gray-100 p-10">
               <GalleryHorizontalEnd className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Programmez tout type de post</h5>
+              <h5 className="md:text-lg font-semibold mt-3">Programmez tout</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Créez et programmez vos stories, vos carrousels, vos réels et tout type de post
               </p>
@@ -218,25 +217,23 @@ function App() {
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
               <PencilLine className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Relancer mes clients ? Jamais</h5>
+              <h5 className="md:text-lg font-semibold mt-3">Simplifiez vos validations</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Faites valider vos posts en 1 clique. Arrêtez de courir après vos clients. Partagez un lien, c'est tout.
-                Ayez le temps d'être créatif.
+                Faites valider vos publications en 1 clique, avec 1 lien, c’est tout.
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
               <CheckCheck className="text-primary w-6 h-6" strokeWidth={3} />
               <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Votre client se retrouve sur la même page que vous, sans même insérer d'informations personnelles.
+                Sans créer de compte, donnez accès à vos créations en toute fluidité
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
               <MessageCircle className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Recueillez les retours</h5>
+              <h5 className="md:text-lg font-semibold mt-3">Prenez les feedbacks</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Les commentaires et les retours se retrouvent directement sur la plateforme. Plus besoin de jongler
-                entre les mails. Répondez directement et créez des discussions.
+                Centralisez les retours sur vos posts et créez des discussions, sans mails
               </p>
             </div>
           </div>
@@ -246,18 +243,15 @@ function App() {
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10">
               <GalleryVerticalEnd className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Tout le contenu intéressant, au même endroit</h5>
+              <h5 className="md:text-lg font-semibold mt-3">Toute l'actualité au même endroit</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Trouvez votre inspiration et suivez les tendances depuis votre fil d'actualité personnalisé et 100%
-                intégré à Upcust.
+                Suivez les tendances et trouvez vos inspirations depuis votre fil d’actualité 100% personnalisé
               </p>
             </div>
             <div className="rounded bg-gray-100 p-10">
               <LayoutDashboard className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Personnalisez</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Votre fil d'actualité à suivre selon les réseaux
-              </p>
+              <p className="text-sm md:text-base max-w-[450px] mt-1">Un fil d'actualité à suivre selon les réseaux</p>
             </div>
             <div className="rounded bg-gray-100 p-10">
               <svg
