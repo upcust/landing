@@ -95,3 +95,8 @@
 .active {
   @apply text-accent-foreground;
 }
+
+::selection {
+  color: black;
+  background: hsl(var(--primary));
+}
