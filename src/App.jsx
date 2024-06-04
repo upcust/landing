@@ -119,6 +119,7 @@ function App() {
                   className="text-black font-medium hover:text-primary hover:bg-black"
                   onClick={() => {
                     Confetti({});
+                    setOpen(false);
                     document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
@@ -365,7 +366,7 @@ function App() {
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
         <Accordion type="multiple" className="pb-20">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-lg">
+            <AccordionTrigger className="text-lg text-left">
               Y a-t-il des limites au nombre de posts que je peux programmer
             </AccordionTrigger>
             <AccordionContent className="text-left text-lg font-light">
@@ -375,7 +376,7 @@ function App() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-lg">
+            <AccordionTrigger className="text-lg text-left">
               Puis-je programmer des posts pour plusieurs réseaux sociaux en même temps ?
             </AccordionTrigger>
             <AccordionContent className="text-left text-lg font-light">
@@ -383,7 +384,7 @@ function App() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-lg">Comment puis-je collaborer sans compte ?</AccordionTrigger>
+            <AccordionTrigger className="text-lg text-left">Comment puis-je collaborer sans compte ?</AccordionTrigger>
             <AccordionContent className="text-left text-lg font-light">
               Lorsque vous utilisez Upcust, vous pouvez partager un lien unique pour collaborer avec vos équipes sans
               demander la création d'un compte. Ces invitations sont protégées par un mot de passe pour garantir la
