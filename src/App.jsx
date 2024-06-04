@@ -62,7 +62,7 @@ function App() {
               className="text-foreground hover:text-primary"
               onClick={() => document.getElementById('trends').scrollIntoView({ behavior: 'smooth' })}
             >
-              Tendances
+              Veille
             </Link>
             <Button
               size="sm"
@@ -72,7 +72,7 @@ function App() {
                 document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              🚀 Demandez une démo
+              🚀 Demander une démo
             </Button>
           </div>
           <Sheet open={open} onOpenChange={(o) => setOpen(o)}>
@@ -112,7 +112,7 @@ function App() {
                     document.getElementById('trends').scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Tendances
+                  Veille
                 </Link>
                 <Button
                   size="sm"
@@ -123,7 +123,7 @@ function App() {
                     document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  🚀 Demandez une démo
+                  🚀 Demander une démo
                 </Button>
               </nav>
             </SheetContent>
@@ -157,7 +157,7 @@ function App() {
               document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            🚀 Demandez une démo
+            🚀 Demander une démo
           </Button>
           <div className="z-10 absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 cursor-pointer">
             <CircleArrowDown
@@ -271,40 +271,48 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-28" id="validate">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
-              <PencilLine className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Simplifiez vos validations</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Faites valider vos publications en 1 clique, avec 1 lien, c’est tout.
-              </p>
+            <div className="rounded bg-gray-100 md:col-span-2 flex flex-col justify-between">
+              <div className="p-10">
+                <PencilLine className="text-primary fill-primary w-6 h-6" />
+                <h5 className="md:text-lg font-semibold mt-3">Simplifiez vos validations</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1">
+                  Faites valider vos publications en 1 clique, avec 1 lien, c’est tout.
+                </p>
+              </div>
+              <img src="/simplify.png" alt="Simplify your validations" className="w-full px-4 md:px-10" />
             </div>
-            <div className="rounded bg-gray-100 p-10">
-              <CheckCheck className="text-primary w-6 h-6" strokeWidth={3} />
-              <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Sans créer de compte, donnez accès à vos créations en toute fluidité
-              </p>
+            <div className="rounded bg-gray-100 flex flex-col justify-between">
+              <div className="p-10">
+                <CheckCheck className="text-primary w-6 h-6" strokeWidth={3} />
+                <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1">
+                  Sans créer de compte, donnez accès à vos créations en toute fluidité
+                </p>
+              </div>
+              <img src="/validate.png" alt="Validate without account" className="w-full px-4 md:px-10" />
             </div>
-            <div className="rounded bg-gray-100 p-10">
-              <MessageCircle className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Prenez les feedbacks</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Centralisez les retours sur vos posts et créez des discussions, sans mails
-              </p>
+            <div className="rounded bg-gray-100 flex flex-col justify-between">
+              <div className="p-10">
+                <MessageCircle className="text-primary fill-primary w-6 h-6" />
+                <h5 className="md:text-lg font-semibold mt-3">Prenez les feedbacks</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1">
+                  Centralisez les retours sur vos posts et créez des discussions, sans mails
+                </p>
+              </div>
+              <img src="/feedbacks.png" alt="Validate without account" className="w-full px-4 md:px-10" />
             </div>
           </div>
         </div>
         <div className="md:space-y-16 space-y-10 py-28">
           <h2 className="text-center font-bold xl:text-4xl md:text-3xl text-xl max-w-[700px] mx-auto">
-            Pensé pour fonctionner avec vos outils
+            Fonctionne avec vos outils habituels
           </h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 p-10">
               <Radio className="text-primary w-6 h-6" strokeWidth={2.5} />
               <h5 className="md:text-lg font-semibold mt-3">Interconnecté</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Publiez sur plusieurs réseaux en même temps, automatisez le reporting et communiquez rapidement les
-                performances des publications
+                Publiez sur plusieurs réseaux, automatisez le reporting et communiquez rapidement vos performances
               </p>
             </div>
             <div className="rounded bg-gray-100 p-6">

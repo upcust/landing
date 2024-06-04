@@ -14,7 +14,7 @@ export default function DemoForm() {
     <div className="min-h-[600px] h-screen flex items-center justify-center pb-10" id="demo">
       <div className="h-3/5 bg-[#2F2C2C] w-full p-10 rounded my-auto text-white flex flex-col justify-between items-start">
         <div className="max-w-[500px]">
-          <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-1">Demandez une démo</h2>
+          <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-1">Demander une démo</h2>
           <p className="text-lg font-light mb-6">
             Découvrez comment Upcust peut vous aider à gérer vos réseaux sociaux en toute simplicité.
           </p>
@@ -38,7 +38,7 @@ export default function DemoForm() {
           }}
           className="text-black"
         >
-          C'est terminé
+          Je réserve
         </Button>
         <PopupModal
           url="https://calendly.com/upcust-app/30min"
