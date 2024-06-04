@@ -44,7 +44,7 @@ export default function ConnectedSocialNetworks() {
             <Icons.notion className="h-6 w-6" />
           </Circle>
           <Circle ref={div4Ref} className="h-16 w-16">
-            <img src={upcust_inline} className="h-10 w-10" />
+            <img src={upcust_inline} className="h-10 w-10" alt="upcust_inline" />
           </Circle>
           <Circle ref={div6Ref}>
             <Icons.slack className="h-6 w-6" />
