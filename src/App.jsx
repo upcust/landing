@@ -20,10 +20,6 @@ import {
 } from 'lucide-react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-import logo_inline from '/logo_inline.png';
-import cube from '/cube.png';
-import cmdk_bg from '/cmdk-bg.png';
-import cmdk from '/cmdk.png';
 import { DotPattern } from '@/components/magicui/dot-pattern.jsx';
 import Reviews from '@/components/reviews.jsx';
 import Meteors from '@/components/magicui/meteors.jsx';
@@ -31,6 +27,7 @@ import { useState } from 'react';
 import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx';
 import { Confetti } from '@/components/magicui/confetti.jsx';
 import DemoForm from '@/components/demo-form.jsx';
+import Footer from '@/components/footer.jsx';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -40,7 +37,7 @@ function App() {
       <header className="fixed w-full border-b bg-background/90 backdrop-blur-xs z-50">
         <nav className="flex justify-between items-center py-4 container">
           <Link to="#" onClick={() => document.scrollingElement.scrollIntoView({ behavior: 'smooth' })}>
-            <img src={logo_inline} alt="Logo" className="h-10" />
+            <img src="/logo_inline.png" alt="Logo" className="h-10" />
           </Link>
           <div className="md:flex gap-8 items-center justify-center hidden">
             <Link
@@ -139,7 +136,7 @@ function App() {
             cr={1.5}
           />
           <div className="z-10">
-            <img src={cube} alt="Cube" className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            <img src="/cube.png" alt="Cube" className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
             <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-3xl">
               Libérez votre potentiel de <br />
               Community Manager
@@ -172,45 +169,51 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-28" id="plan">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Planifiez simplement</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-2 md:aspect-video aspect-square p-10">
-              <svg
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-primary fill-primary"
-              >
-                <path
-                  d="M16.5 31.0833C24.5541 31.0833 31.0833 24.5541 31.0833 16.5C31.0833 8.44584 24.5541 1.91666 16.5 1.91666C8.44581 1.91666 1.91663 8.44584 1.91663 16.5C1.91663 24.5541 8.44581 31.0833 16.5 31.0833Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 7.75V16.5L22.3333 19.4167"
-                  stroke="white"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <h5 className="md:text-lg font-semibold mt-3">Gérez votre planning en toute simplicité</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Programmez vos posts pour publier au bon moment <br />
-                Visualisez rapidement votre calendrier <br />
-                Naviguez aisément entre les posts
-              </p>
+            <div className="rounded bg-gray-100 md:col-span-2 border border-gray-200">
+              <div className="p-10 pb-0">
+                <svg
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 text-primary fill-primary"
+                >
+                  <path
+                    d="M16.5 31.0833C24.5541 31.0833 31.0833 24.5541 31.0833 16.5C31.0833 8.44584 24.5541 1.91666 16.5 1.91666C8.44581 1.91666 1.91663 8.44584 1.91663 16.5C1.91663 24.5541 8.44581 31.0833 16.5 31.0833Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M16.5 7.75V16.5L22.3333 19.4167"
+                    stroke="white"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <h5 className="md:text-lg font-semibold mt-3">Gérez votre planning en toute simplicité</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1">
+                  Programmez vos posts pour publier au bon moment <br />
+                  Visualisez rapidement votre calendrier <br />
+                  Naviguez aisément entre les posts
+                </p>
+              </div>
+              <img src="/calendar.png" alt="Calendar Upcust" />
             </div>
-            <div className="rounded bg-gray-100 p-10 relative overflow-hidden">
+            <div className="rounded bg-gray-100 relative overflow-hidden border border-gray-200">
               <Meteors number={30} />
-              <Zap className="text-primary fill-primary w-6 h-6 z-10" />
-              <h5 className="md:text-lg font-semibold mt-3 z-10">Anticipez l’impact de vos posts</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1 z-10">
-                Prévisualisez vos publications et optimisez votre stratégie de contenu en un clin d’oeil pour tous vos
-                réseaux
-              </p>
+              <div className="p-10">
+                <Zap className="text-primary fill-primary w-6 h-6 z-10" />
+                <h5 className="md:text-lg font-semibold mt-3 z-10">Anticipez l’impact de vos posts</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1 z-10">
+                  Prévisualisez vos publications et optimisez votre stratégie de contenu en un clin d’oeil pour tous vos
+                  réseaux
+                </p>
+              </div>
+              <img src="/post-impact.png" alt="Post impact" className="px-10" />
             </div>
-            <div className="rounded bg-gray-100">
+            <div className="rounded bg-gray-100 border border-gray-200 flex flex-col justify-between">
               <div className="p-10">
                 <svg
                   viewBox="0 0 28 28"
@@ -240,23 +243,23 @@ function App() {
                 </p>
               </div>
               <div className="overflow-hidden relative rounded-b">
-                <img src={cmdk_bg} alt="cmdk_bg" />
+                <img src="/cmdk-bg.png" alt="cmdk_bg" />
                 <div className="pointer-events-none absolute left-0 h-1/2 top-0 w-full bg-gradient-to-b from-gray-100 dark:from-background" />
                 <img
-                  src={cmdk}
+                  src="/cmdk.png"
                   alt="cmdk"
                   className="absolute top-1/2 left-1/2 w-3/4 -translate-x-1/2 -translate-y-1/2"
                 />
               </div>
             </div>
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <GalleryHorizontalEnd className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Programmez tout</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Créez et programmez vos stories, vos carrousels, vos réels et tout type de post
               </p>
             </div>
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <LaptopMinimal className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Créez pour tous les réseaux</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
@@ -271,7 +274,7 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-28" id="validate">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-2 flex flex-col justify-between">
+            <div className="rounded bg-gray-100 md:col-span-2 flex flex-col justify-between border border-gray-200">
               <div className="p-10">
                 <PencilLine className="text-primary fill-primary w-6 h-6" />
                 <h5 className="md:text-lg font-semibold mt-3">Simplifiez vos validations</h5>
@@ -281,7 +284,7 @@ function App() {
               </div>
               <img src="/simplify.png" alt="Simplify your validations" className="w-full px-4 md:px-10" />
             </div>
-            <div className="rounded bg-gray-100 flex flex-col justify-between">
+            <div className="rounded bg-gray-100 flex flex-col justify-between border border-gray-200">
               <div className="p-10">
                 <CheckCheck className="text-primary w-6 h-6" strokeWidth={3} />
                 <h5 className="md:text-lg font-semibold mt-3">Validation sans prérequis</h5>
@@ -291,7 +294,7 @@ function App() {
               </div>
               <img src="/validate.png" alt="Validate without account" className="w-full px-4 md:px-10" />
             </div>
-            <div className="rounded bg-gray-100 flex flex-col justify-between">
+            <div className="rounded bg-gray-100 flex flex-col justify-between border border-gray-200">
               <div className="p-10">
                 <MessageCircle className="text-primary fill-primary w-6 h-6" />
                 <h5 className="md:text-lg font-semibold mt-3">Prenez les feedbacks</h5>
@@ -308,14 +311,14 @@ function App() {
             Fonctionne avec vos outils habituels
           </h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <Radio className="text-primary w-6 h-6" strokeWidth={2.5} />
               <h5 className="md:text-lg font-semibold mt-3">Interconnecté</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Publiez sur plusieurs réseaux, automatisez le reporting et communiquez rapidement vos performances
               </p>
             </div>
-            <div className="rounded bg-gray-100 p-6">
+            <div className="rounded bg-gray-100 p-6 border border-gray-200">
               <ConnectedSocialNetworks />
             </div>
           </div>
@@ -323,19 +326,19 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-28" id="trends">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10">
+            <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10 border border-gray-200">
               <GalleryVerticalEnd className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Toute l'actualité au même endroit</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
                 Suivez les tendances et trouvez vos inspirations depuis votre fil d’actualité 100% personnalisé
               </p>
             </div>
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <LayoutDashboard className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Personnalisez</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">Un fil d'actualité à suivre selon les réseaux</p>
             </div>
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <svg
                 width="24"
                 height="18"
@@ -363,7 +366,7 @@ function App() {
                 Filtrez les comptes et réseaux selon vos besoins
               </p>
             </div>
-            <div className="rounded bg-gray-100 p-10">
+            <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <ArrowBigUpDash className="text-primary fill-primary w-6 h-6" />
               <h5 className="md:text-lg font-semibold mt-3">Augmentez votre visibilité</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">Intéragissez directement avec les publications</p>
@@ -401,6 +404,7 @@ function App() {
           </AccordionItem>
         </Accordion>
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }
