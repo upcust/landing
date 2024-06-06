@@ -23,16 +23,26 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import { DotPattern } from '@/components/magicui/dot-pattern.jsx';
 import Reviews from '@/components/reviews.jsx';
 import Meteors from '@/components/magicui/meteors.jsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx';
 import { Confetti } from '@/components/magicui/confetti.jsx';
 import DemoForm from '@/components/demo-form.jsx';
 import Footer from '@/components/footer.jsx';
 
-import config from '@/config.json';
-
 function App() {
   const [open, setOpen] = useState(false);
+
+  const [config, setConfig] = useState({});
+
+  useEffect(() => {
+    fetch('https://web-api.upcust.com/config').then((response) => {
+      if (response.ok) {
+        response.json().then((data) => {
+          setConfig(data);
+        });
+      }
+    });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -378,7 +388,7 @@ function App() {
         <DemoForm />
         <h2 className="font-bold xl:text-4xl md:text-3xl text-2xl mb-4">Questions & Réponses</h2>
         <Accordion type="multiple" className="pb-20">
-          {config.questions.map((question, index) => (
+          {config.questions?.map((question, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-lg text-left">{question.title}</AccordionTrigger>
               <AccordionContent className="text-left text-lg font-light">{question.content}</AccordionContent>

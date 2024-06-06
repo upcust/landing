@@ -1,7 +1,7 @@
 import { Input } from '@/components/ui/input.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import { PopupModal } from 'react-calendly';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { triggerConfettiSideCannons } from '@/components/confetti-side-cannons.jsx';
 
 export default function DemoForm() {
@@ -9,6 +9,35 @@ export default function DemoForm() {
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+
+  useEffect(() => {
+    window.addEventListener('blur', sendLeadInfo);
+    window.addEventListener('beforeunload', sendLeadInfo);
+
+    return () => {
+      window.removeEventListener('blur', sendLeadInfo);
+      window.removeEventListener('beforeunload', sendLeadInfo);
+    };
+  }, [email, name]);
+
+  const sendLeadInfo = () => {
+    console.log('Sending lead info', email, name);
+    if (!email || !name || !email.match(new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$'))) return;
+    fetch('https://web-api.upcust.com/lead', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+      }),
+    }).then((response) => {
+      if (response.ok) {
+        console.log('Lead info sent');
+      }
+    });
+  };
 
   return (
     <div className="min-h-[600px] h-screen flex items-center justify-center pb-10" id="demo">
@@ -29,6 +58,7 @@ export default function DemoForm() {
             className="w-full h-10 mb-4 text-black"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onBlur={sendLeadInfo}
           />
         </div>
         <Button
