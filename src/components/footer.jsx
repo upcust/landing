@@ -48,7 +48,7 @@ export default function Footer() {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © {new Date().getFullYear()}{' '}
             <a href="https://upcust.com" className="hover:underline">
-              Upcust™
+              Upcust
             </a>
             . Tous droits réservés.
           </span>
