@@ -56,17 +56,17 @@ export default function DemoForm() {
 
   return (
     <div className="min-h-[900px] h-screen flex items-center justify-center pb-10" id="demo">
-      <div className="h-3/5 bg-[#2F2C2C] w-full p-10 rounded-xl my-auto text-white flex flex-col justify-between items-start relative">
+      <div className="h-3/5 bg-[#2F2C2C] w-full px-5 py-10 rounded-xl my-auto text-white flex flex-col justify-between items-start relative overflow-hidden">
         <img src="/demo-bg.png" alt="Demo" className="absolute bottom-0 left-0 w-full" />
         <div className="max-w-[500px] m-auto flex flex-col items-center text-center relative">
-          <span className="bg-primary rounded-full px-5 py-1 text-black absolute -top-10 text-sm font-medium">
+          <span className="bg-primary rounded-full px-5 py-1 text-black text-sm font-medium">
             Démo de 30 minutes gratuite
           </span>
-          <h2 className="font-bold xl:text-5xl md:text-4xl text-3xl mb-1 mt-10">
+          <h2 className="font-bold xl:text-5xl md:text-4xl text-2xl mb-1 mt-5">
             Laissez nous vous <br />
             surprendre
           </h2>
-          <p className="text-lg font-light mb-6">
+          <p className="text-sm md:text-lg font-light mb-6">
             Découvrez comment Upcust peut vous aider à gérer vos réseaux sociaux en toute simplicité.
           </p>
           <div className="flex gap-4">
