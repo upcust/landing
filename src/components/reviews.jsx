@@ -3,28 +3,76 @@ import { cn } from '@/lib/utils.js';
 
 const reviews = [
   {
-    name: 'Jocelyn Q',
-    username: '@jocelynq',
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: 'https://avatar.vercel.sh/jocelynq',
+    name: 'Léa M',
+    username: '@leam',
+    body: 'Accédez à une bibliothèque de ressources précieuses : Tenez-vous informé des dernières pratiques et stratégies en matière de marketing des réseaux sociaux.',
+    img: 'https://avatar.vercel.sh/leam',
   },
   {
-    name: 'Romain P',
-    username: '@romainp',
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: 'https://avatar.vercel.sh/romainp',
+    name: 'Alexandre D',
+    username: '@alexandred',
+    body: 'Soyez alerté des menaces et opportunités : Recevez des notifications en temps réel sur les événements importants qui pourraient affecter votre marque.',
+    img: 'https://avatar.vercel.sh/alexandred',
   },
   {
-    name: 'Charles S-M',
-    username: '@charlessm',
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: 'https://avatar.vercel.sh/charlessm',
+    name: 'Marie L',
+    username: '@mariel',
+    body: 'Reporting automatisé et personnalisable : Gagnez du temps et créez des rapports personnalisés en quelques minutes.',
+    img: 'https://avatar.vercel.sh/mariel',
   },
   {
-    name: 'Quentin F',
-    username: '@quentinf',
-    body: "Je sais pas ce que je fais ici. C'est n'importe quoi. J'aime pas.",
-    img: 'https://avatar.vercel.sh/quentinf',
+    name: 'Julien B',
+    username: '@julienb',
+    body: 'Un tableau de bord centralisé : Rassemblez toutes vos données de réseaux sociaux en un seul endroit pour une analyse simplifiée.',
+    img: 'https://avatar.vercel.sh/julienb',
+  },
+  {
+    name: 'Camille C',
+    username: '@camillec',
+    body: 'Des données complètes et actionnables : Obtenez des insights précieux sur vos performances et prenez des décisions éclairées pour optimiser vos résultats.',
+    img: 'https://avatar.vercel.sh/camillec',
+  },
+  {
+    name: 'Lucas H',
+    username: '@lucash',
+    body: 'Validation des publications simplifiée : Dites adieu aux allers-retours fastidieux ! Validez les publications en un clic et assurez-vous que votre message est parfait avant de le diffuser.',
+    img: 'https://avatar.vercel.sh/lucash',
+  },
+  {
+    name: 'Chloé G',
+    username: '@chloeg',
+    body: "Un calendrier éditorial clair et précis : Visualisez votre stratégie de contenu en un coup d'œil et gagnez du temps en planifiant vos publications à l'avance.",
+    img: 'https://avatar.vercel.sh/chloeg',
+  },
+  {
+    name: 'Théo L',
+    username: '@theol',
+    body: 'Fini les heures perdues à programmer des posts ! Planifiez vos publications sur tous les réseaux sociaux en quelques clics, sur Instagram et LinkedIn.',
+    img: 'https://avatar.vercel.sh/theol',
+  },
+  {
+    name: 'Emma P',
+    username: '@emmap',
+    body: 'Restez à la pointe des tendances : Suivez les tendances des réseaux sociaux en temps réel et ne manquez jamais une opportunité.',
+    img: 'https://avatar.vercel.sh/emmap',
+  },
+  {
+    name: 'Maxime R',
+    username: '@maximer',
+    body: 'Commentaires et discussions en contexte : Communiquez efficacement avec votre équipe directement sur les publications.',
+    img: 'https://avatar.vercel.sh/maximer',
+  },
+  {
+    name: 'Lola S',
+    username: '@lolas',
+    body: "Approbation des publications en un clic : Simplifiez le processus d'approbation et assurez-vous que tout le monde est sur la même longueur d'onde.",
+    img: 'https://avatar.vercel.sh/lolas',
+  },
+  {
+    name: 'Hugo T',
+    username: '@hugot',
+    body: 'Travaillez en équipe en toute simplicité : Collaborez facilement avec vos collègues et clients sur la création, la validation et la publication de contenu.',
+    img: 'https://avatar.vercel.sh/hugot',
   },
 ];
 
@@ -57,12 +105,12 @@ const ReviewCard = ({ img, name, username, body }) => {
 export default function Reviews() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-44">
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee pauseOnHover className="[--duration:40s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse pauseOnHover className="[--duration:40s]">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
