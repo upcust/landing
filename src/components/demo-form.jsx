@@ -41,6 +41,7 @@ export default function DemoForm() {
 
   useEffect(() => {
     const onDown = (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       if (e.key === 'r') {
         triggerConfettiSideCannons();
         setCalendlyModalOpen(true);
@@ -66,19 +67,19 @@ export default function DemoForm() {
             Laissez nous vous <br />
             surprendre
           </h2>
-          <p className="text-sm md:text-lg font-light mb-6">
+          <p className="text-sm md:text-lg font-light mb-6 mt-5">
             Découvrez comment Upcust peut vous aider à gérer vos réseaux sociaux en toute simplicité.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-col sm:flex-row mb-4">
             <Input
               placeholder="Votre nom"
-              className="w-full h-10 mb-4 text-black"
+              className="w-full h-10 text-black"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <Input
               placeholder="Votre email"
-              className="w-full h-10 mb-4 text-black"
+              className="w-full h-10 text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onBlur={sendLeadInfo}

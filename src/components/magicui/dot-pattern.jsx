@@ -1,7 +1,18 @@
 import { cn } from '@/lib/utils';
 import { useId } from 'react';
 
-export function DotPattern({ width = 16, height = 16, x = 0, y = 0, cx = 1, cy = 1, cr = 1, className, ...props }) {
+export function DotPattern({
+  width = 16,
+  height = 16,
+  x = 0,
+  y = 0,
+  cx = 1,
+  cy = 1,
+  cr = 1,
+  className,
+  ref,
+  ...props
+}) {
   const id = useId();
 
   return (

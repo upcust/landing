@@ -28,11 +28,16 @@ import ConnectedSocialNetworks from '@/components/connected-social-networks.jsx'
 import { Confetti } from '@/components/magicui/confetti.jsx';
 import DemoForm from '@/components/demo-form.jsx';
 import Footer from '@/components/footer.jsx';
+import { Parallax, useParallax } from 'react-scroll-parallax';
 
 function App() {
   const [open, setOpen] = useState(false);
 
   const [config, setConfig] = useState({});
+
+  const parallax = useParallax({
+    translateX: [-20, 20],
+  });
 
   useEffect(() => {
     fetch('https://web-api.upcust.com/config').then((response) => {
@@ -81,7 +86,7 @@ function App() {
                 document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              🚀 Demander une démo
+              🚀 Je réserve ma démo
             </Button>
           </div>
           <Sheet open={open} onOpenChange={(o) => setOpen(o)}>
@@ -132,7 +137,7 @@ function App() {
                     document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  🚀 Demander une démo
+                  🚀 Je réserve ma démo
                 </Button>
               </nav>
             </SheetContent>
@@ -140,15 +145,40 @@ function App() {
         </nav>
       </header>
       <main className="container">
-        <div className="relative min-h-screen flex flex-col align-middle justify-center space-y-8 pb-32 md:py-32">
+        <div className="relative min-h-screen align-middle justify-center flex flex-col gap-10 pb-32 md:py-32 md:pt-0">
           <DotPattern
             className={cn('[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]', 'z-0 fill-gray-300')}
             cx={1.5}
             cy={1.5}
             cr={1.5}
           />
+          <div className="hidden xl:block">
+            <Parallax speed={-15} className="bottom-0 left-0 absolute">
+              <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+            <Parallax speed={-20} className="top-0 -left-4 absolute bg-red-50 p-3 rounded">
+              <img src="/helix.png" alt="Cube" className="w-16 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+            <Parallax speed={-10} className="bottom-20 -right-10 absolute">
+              <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+            <Parallax speed={-12} className="bottom-1/3 -right-24 absolute bg-orange-50 p-7 rounded">
+              <img src="/helix.png" alt="Cube" className="w-28 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+            <Parallax speed={-8} className="bottom-1/3 -left-10 absolute bg-primary/20 p-7 rounded">
+              <img src="/cube.png" alt="Cube" className="w-20 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+            <Parallax speed={-5} className="top-44 -right-4 absolute">
+              <img src="/cube.png" alt="Cube" className="w-24 animate-[wiggle_2s_ease-in-out_infinite]" />
+            </Parallax>
+          </div>
           <div className="z-10">
-            <img src="/cube.png" alt="Cube" className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            <img
+              src="/cube.png"
+              alt="Cube"
+              className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]"
+              ref={parallax.ref}
+            />
             <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-3xl">
               Libérez votre potentiel de <br />
               Community Manager
@@ -160,13 +190,13 @@ function App() {
             Soyez en veille des dernières tendances.
           </p>
           <Button
-            className="w-fit align-middle mx-auto text-lg font-medium z-10 text-black hover:text-primary hover:bg-black"
+            className="w-fit align-middle mx-auto text-md font-medium z-10 text-black hover:text-primary hover:bg-black mt-5"
             onClick={() => {
               Confetti({});
               document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            🚀 Demander une démo
+            🚀 Je réserve ma démo
           </Button>
           <div className="z-10 absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 cursor-pointer">
             <CircleArrowDown
@@ -178,7 +208,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="md:space-y-16 space-y-10 py-28" id="plan">
+        <div className="md:space-y-16 space-y-10 py-40" id="plan">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Planifiez simplement</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 border border-gray-200">
@@ -283,7 +313,7 @@ function App() {
       </main>
       <Reviews />
       <main className="container">
-        <div className="md:space-y-16 space-y-10 py-28" id="validate">
+        <div className="md:space-y-16 space-y-10 py-40" id="validate">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Validez sans efforts</h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-2 flex flex-col justify-between border border-gray-200">
@@ -318,7 +348,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="md:space-y-16 space-y-10 py-28">
+        <div className="md:space-y-16 space-y-10 py-40">
           <h2 className="text-center font-bold xl:text-4xl md:text-3xl text-xl max-w-[700px] mx-auto">
             Fonctionne avec vos outils habituels
           </h2>
@@ -335,7 +365,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="md:space-y-16 space-y-10 py-28" id="trends">
+        <div className="md:space-y-16 space-y-10 py-40" id="trends">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
             <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10 border border-gray-200">

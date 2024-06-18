@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint:fix": "prettier --write ./src",
     "lint:check": "prettier --check ./src",
@@ -24,6 +24,7 @@
     "react-calendly": "^4.3.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
+    "react-scroll-parallax": "^3.4.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
