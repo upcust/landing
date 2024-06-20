@@ -156,16 +156,16 @@ function App() {
             <Parallax speed={-15} className="bottom-0 left-0 absolute">
               <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
-            <Parallax speed={-20} className="top-0 -left-4 absolute bg-red-50 p-3 rounded">
+            <Parallax speed={-20} className="top-0 -left-4 absolute rounded">
               <img src="/helix.png" alt="Cube" className="w-16 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
             <Parallax speed={-10} className="bottom-20 -right-10 absolute">
               <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
-            <Parallax speed={-12} className="bottom-1/3 -right-24 absolute bg-orange-50 p-7 rounded">
+            <Parallax speed={-12} className="bottom-1/3 -right-24 absolute rounded">
               <img src="/helix.png" alt="Cube" className="w-28 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
-            <Parallax speed={-8} className="bottom-1/3 -left-10 absolute bg-primary/20 p-7 rounded">
+            <Parallax speed={-8} className="bottom-1/3 -left-10 absolute rounded">
               <img src="/cube.png" alt="Cube" className="w-20 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
             <Parallax speed={-5} className="top-44 -right-4 absolute">
