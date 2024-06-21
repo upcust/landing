@@ -353,7 +353,13 @@ function App() {
             Fonctionne avec vos outils habituels
           </h2>
           <div className="grid w-full md:grid-cols-2 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 p-10 border border-gray-200">
+            <div
+              className="rounded bg-gray-100 p-10 border border-gray-200"
+              style={{
+                backgroundImage: 'url(/bg_walls.png)',
+                backgroundSize: 'cover',
+              }}
+            >
               <Radio className="text-primary w-6 h-6" strokeWidth={2.5} />
               <h5 className="md:text-lg font-semibold mt-3">Interconnecté</h5>
               <p className="text-sm md:text-base max-w-[450px] mt-1">
