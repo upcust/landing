@@ -374,12 +374,15 @@ function App() {
         <div className="md:space-y-16 space-y-10 py-40" id="trends">
           <h2 className="text-center font-bold xl:text-5xl md:text-4xl text-2xl">Suivez les tendances</h2>
           <div className="grid w-full md:grid-cols-3 gap-6 grid-cols-1">
-            <div className="rounded bg-gray-100 md:col-span-3 md:aspect-video aspect-square p-10 border border-gray-200">
-              <GalleryVerticalEnd className="text-primary fill-primary w-6 h-6" />
-              <h5 className="md:text-lg font-semibold mt-3">Toute l'actualité au même endroit</h5>
-              <p className="text-sm md:text-base max-w-[450px] mt-1">
-                Suivez les tendances et trouvez vos inspirations depuis votre fil d’actualité 100% personnalisé
-              </p>
+            <div className="rounded bg-gray-100 md:col-span-3 border border-gray-200">
+              <div className="p-10">
+                <GalleryVerticalEnd className="text-primary fill-primary w-6 h-6" />
+                <h5 className="md:text-lg font-semibold mt-3">Toute l'actualité au même endroit</h5>
+                <p className="text-sm md:text-base max-w-[450px] mt-1">
+                  Suivez les tendances et trouvez vos inspirations depuis votre fil d’actualité 100% personnalisé
+                </p>
+              </div>
+              <img src="/share_content.png" />
             </div>
             <div className="rounded bg-gray-100 p-10 border border-gray-200">
               <LayoutDashboard className="text-primary fill-primary w-6 h-6" />
