@@ -80,7 +80,7 @@ function App() {
             </Link>
             <Button
               size="sm"
-              className="w-fit text-black font-medium hover:text-primary hover:bg-black"
+              className="w-fit text-black font-medium"
               onClick={() => {
                 Confetti({});
                 document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
@@ -130,7 +130,7 @@ function App() {
                 </Link>
                 <Button
                   size="sm"
-                  className="text-black font-medium hover:text-primary hover:bg-black"
+                  className="text-black font-medium"
                   onClick={() => {
                     Confetti({});
                     setOpen(false);
@@ -153,8 +153,8 @@ function App() {
             cr={1.5}
           />
           <div className="hidden xl:block">
-            <Parallax speed={-15} className="bottom-0 left-0 absolute">
-              <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
+            <Parallax speed={-15} className="-bottom-10 -left-72 absolute blur-md">
+              <img src="/cube.png" alt="Cube" className="w-82 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
             <Parallax speed={-20} className="top-0 -left-4 absolute rounded">
               <img src="/helix.png" alt="Cube" className="w-16 animate-[wiggle_2s_ease-in-out_infinite]" />
@@ -162,21 +162,18 @@ function App() {
             <Parallax speed={-10} className="bottom-20 -right-10 absolute">
               <img src="/cube.png" alt="Cube" className="w-32 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
-            <Parallax speed={-12} className="bottom-1/3 -right-24 absolute rounded">
+            <Parallax speed={-12} className="bottom-1/3 -right-24 absolute rounded blur-sm">
               <img src="/helix.png" alt="Cube" className="w-28 animate-[wiggle_2s_ease-in-out_infinite]" />
             </Parallax>
-            <Parallax speed={-8} className="bottom-1/3 -left-10 absolute rounded">
-              <img src="/cube.png" alt="Cube" className="w-20 animate-[wiggle_2s_ease-in-out_infinite]" />
-            </Parallax>
-            <Parallax speed={-5} className="top-44 -right-4 absolute">
-              <img src="/cube.png" alt="Cube" className="w-24 animate-[wiggle_2s_ease-in-out_infinite]" />
+            <Parallax speed={-5} className="top-32 -right-32 absolute">
+              <img src="/cube.png" alt="Cube" className="w-72 animate-[wiggle_2s_ease-in-out_infinite] blur" />
             </Parallax>
           </div>
           <div className="z-10">
             <img
               src="/cube.png"
               alt="Cube"
-              className="md:w-40 mx-auto w-32 animate-[wiggle_2s_ease-in-out_infinite]"
+              className="md:w-40 mx-auto w-20 animate-[wiggle_2s_ease-in-out_infinite] xl:blur-sm"
               ref={parallax.ref}
             />
             <h1 className="xl:text-6xl font-bold text-center md:text-5xl text-3xl">
@@ -190,7 +187,7 @@ function App() {
             Soyez en veille des dernières tendances.
           </p>
           <Button
-            className="w-fit align-middle mx-auto text-md font-medium z-10 text-black hover:text-primary hover:bg-black mt-5"
+            className="w-fit align-middle mx-auto text-md font-medium z-10 text-black mt-5"
             onClick={() => {
               Confetti({});
               document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
